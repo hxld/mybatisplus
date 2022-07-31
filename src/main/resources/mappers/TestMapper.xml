@@ -8,4 +8,10 @@
     <!--SQL片段，记录基础字段-->
     <sql id="BaseColumns">id,name,age,email</sql>
 
+
+    <!-- List<User> getAllUser();-->
+    <select id="getAllUser" resultType="user">
+        select  <include refid="BaseColumns"></include> from user
+    </select>
+
 </mapper>
