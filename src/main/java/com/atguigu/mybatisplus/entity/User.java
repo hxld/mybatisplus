@@ -13,5 +13,14 @@ public class User {
     private Integer age;
     private String email;
 
+    public User(long id, String name, Integer age, String email) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
 
+    public User() {
+
+    }
 }

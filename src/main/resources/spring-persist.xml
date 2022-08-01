@@ -42,4 +42,6 @@
         <property name="basePackage" value="com.atguigu.mybatisplus.mapper"/>
     </bean>
 
+    <!--设置自动扫描service的包-->
+    <context:component-scan base-package="com.atguigu.mybatisplus.impl"/>
 </beans>
