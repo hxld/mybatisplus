@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.mybatisplus.mapper.UserMapper">
+
+
+<!--    &lt;!&ndash;SQL片段，记录基础字段&ndash;&gt;-->
+<!--    <sql id="BaseColumns">id,name,age,email</sql>-->
+
+
+    <!-- List<User> getAllUser();-->
+    <select id="getAllUser" resultType="User">
+<!--   select  <include refid="BaseColumns"></include> from user-->
+        select id,name,age,email from user
+    </select>
+
+</mapper>

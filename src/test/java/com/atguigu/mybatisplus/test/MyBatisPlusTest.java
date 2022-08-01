@@ -2,8 +2,10 @@ package com.atguigu.mybatisplus.test;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidPooledConnection;
-import com.atguigu.mybatisplus.mapper.TestMapper;
 
+
+import com.atguigu.mybatisplus.entity.User;
+import com.atguigu.mybatisplus.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 
 import org.slf4j.Logger;
@@ -11,11 +13,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * @author hxld
@@ -37,7 +41,10 @@ public class MyBatisPlusTest {
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
-
+    /**
+     * 测试数据库连接
+     * @throws SQLException
+     */
     @Test
     public void getConn() throws SQLException {
         DruidPooledConnection connection = dataSource.getConnection();
@@ -45,6 +52,29 @@ public class MyBatisPlusTest {
         logger.debug(connection.toString());
 
     }
+
+
+    @Autowired
+    private UserMapper userMapper;
+
+    //使用mybatisplus
+    @Test
+    public  void testMybatisPlus(){
+        //根据id查询用户信息
+        System.out.println(userMapper.selectById(1));
+    }
+
+
+    //未使用mybatisplus
+//    @Test
+//    public void testUserMapper(){
+//        List<User> UserList = userMapper.getAllUser();
+//        for (User user:UserList){
+//            System.out.println("user = " + user);
+//        }
+//    }
+
+
 
 }
 
