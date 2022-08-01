@@ -12,12 +12,4 @@
         <package name="com.atguigu.mybatisplus.entity"/>
     </typeAliases>
 
-        <!--设置驼峰式命名-->
-        <settings>
-            <setting name="mapUnderscoreToCamelCase" value="true"/>
-        </settings>
-        <!--设置实体类所在包的别名-->
-        <typeAliases>
-            <package name="com.atguigu.mybatisplus.entity"/>
-        </typeAliases>
 </configuration>
