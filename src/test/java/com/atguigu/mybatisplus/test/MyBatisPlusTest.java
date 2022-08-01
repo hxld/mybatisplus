@@ -2,9 +2,8 @@ package com.atguigu.mybatisplus.test;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidPooledConnection;
+import com.atguigu.mybatisplus.mapper.TestMapper;
 
-
-import com.atguigu.mybatisplus.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 
 import org.slf4j.Logger;
@@ -47,26 +46,6 @@ public class MyBatisPlusTest {
 
     }
 
-
-    @Autowired
-    private UserMapper userMapper;
-
-    //使用mybatisplus
-    @Test
-    public  void testMybatisPlus(){
-        //根据id查询用户信息
-        System.out.println(userMapper.selectById(1));
-
-        //根据Id删除用户
-        System.out.println(userMapper.deleteById(1));
-    }
-//    @Test
-//    public void testUserMapper(){
-//        List<User> UserList = userMapper.getAllUser();
-//        for (User user:UserList){
-//            System.out.println("user = " + user);
-//        }
-//    }
 }
 
 

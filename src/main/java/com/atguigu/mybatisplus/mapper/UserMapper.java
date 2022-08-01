@@ -5,6 +5,10 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/hot-fix
 //未使用mybatisplus
 //public interface UserMapper  {
 //    /**
