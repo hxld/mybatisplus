@@ -8,7 +8,7 @@ import java.util.List;
  * @author hxld
  * @create 2022-07-31 17:26
  */
-public interface TestMapper {
+public interface TestMapper  {
     /**
      * 查询所有用户信息
      * @return
