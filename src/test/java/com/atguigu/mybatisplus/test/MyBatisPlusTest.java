@@ -56,6 +56,9 @@ public class MyBatisPlusTest {
     public  void testMybatisPlus(){
         //根据id查询用户信息
         System.out.println(userMapper.selectById(1));
+
+        //根据Id删除用户
+        System.out.println(userMapper.deleteById(1));
     }
 //    @Test
 //    public void testUserMapper(){
