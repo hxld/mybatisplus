@@ -1,5 +1,6 @@
 package com.atguigu.mybatisplus.entity;
 
+import com.atguigu.mybatisplus.enums.SexEnum;
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
@@ -26,6 +27,9 @@ public class User {
     private String name;
     private Integer age;
     private String email;
+
+
+    private SexEnum sex;
     //逻辑删除
     @TableLogic
     private Integer isDeleted;

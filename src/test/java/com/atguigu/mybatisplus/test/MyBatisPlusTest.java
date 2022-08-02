@@ -5,6 +5,7 @@ import com.alibaba.druid.pool.DruidPooledConnection;
 
 
 import com.atguigu.mybatisplus.entity.User;
+import com.atguigu.mybatisplus.enums.SexEnum;
 import com.atguigu.mybatisplus.mapper.UserMapper;
 import com.atguigu.mybatisplus.service.UserService;
 import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
@@ -180,6 +181,17 @@ public class MyBatisPlusTest {
         }
         boolean b = userService.saveBatch(list);
         System.out.println("b:"+b);
+    }
+
+
+    @Test
+    public void testEnum(){
+        User user = new User();
+        user.setName("admin");
+        user.setAge(33);
+        user.setSex(SexEnum.MALE);
+        int result = userMapper.insert(user);
+        System.out.println(result);
     }
 }
 

@@ -37,6 +37,8 @@
         <property name="dataSource" ref="dataSource"/>
         <!--设置mybatisplus的全局配置，即表的前缀-->
         <property name="globalConfig" ref="globalConfig"></property>
+        <!--配置扫描通用枚举-->
+        <property name="typeEnumsPackage" value="com.atguigu.mybatisplus.enums"></property>
         <!--配置插件-->
         <property name="plugins">
             <array>
@@ -50,6 +52,8 @@
         <property name="interceptors">
             <list>
                 <ref bean="paginationInnerInterceptor"></ref>
+
+                <ref bean="optimisticLockerInnerInterceptor"></ref>
             </list>
         </property>
     </bean>
@@ -61,6 +65,10 @@
         <property name="dbType" value="MYSQL"></property>
     </bean>
 
+    <!--配置乐观锁插件-->
+    <bean id="optimisticLockerInnerInterceptor" class="com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor">
+
+    </bean>
 
 
     <bean id="globalConfig" class="com.baomidou.mybatisplus.core.config.GlobalConfig">

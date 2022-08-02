@@ -15,4 +15,11 @@
         select id,name,age,email from user
     </select>
 
+
+
+<!--    Page<User> selectPageVo(@Param("page") Page<User> page,@Param("age") Integer age);-->
+        <select id="selectPageVo" resultType="user">
+            select uid,user_name,age,email from t_user where age > #{age}
+        </select>
+
 </mapper>
