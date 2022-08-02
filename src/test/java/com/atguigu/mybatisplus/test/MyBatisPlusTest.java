@@ -66,6 +66,7 @@ public class MyBatisPlusTest {
         System.out.println(userMapper.selectById(1));
     }
 
+    //查询列表
     @Test
     public void testlist(){
         List<User> list = userMapper.selectList(null);
@@ -89,8 +90,10 @@ public class MyBatisPlusTest {
     @Test
     public void testInsert(){
 //        INSERT INTO user  ( id, name, age, email )  VALUES  ( ?, ?, ?, ? )
-        User user = new User(6,"张三",23,"zhangsan@126.com");
-
+        User user = new User();
+//        user.setUserName("王6");
+        user.setAge(23);
+        user.setEmail("wangwu@126.com");
         int result = userMapper.insert(user);
 
         System.out.println("result="+result);
@@ -124,8 +127,8 @@ public class MyBatisPlusTest {
     public void testUpdate(){
 //        UPDATE user SET name=?, email=? WHERE id=?
         User user = new User();
-        user.setId(4L);
-        user.setName("李四");
+//        user.setId(4L);
+//        user.setName("李四");
         user.setEmail("lisi@atguigu.com");
         int result = userMapper.updateById(user);
         System.out.println("result="+result);
@@ -170,8 +173,9 @@ public class MyBatisPlusTest {
         List<User> list = new ArrayList<>();
         for (int i = 0; i < 100 ; i++) {
             User user = new User();
-            user.setName("abc"+i);
+//            user.setName("abc"+i);
             user.setAge(20+i);
+            user.setEmail("test"+i+"@atguigu.com");
             list.add(user);
         }
         boolean b = userService.saveBatch(list);

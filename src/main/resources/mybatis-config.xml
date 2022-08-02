@@ -3,13 +3,13 @@
         PUBLIC "-//MyBatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <!--设置驼峰式命名-->
-    <settings>
-        <setting name="mapUnderscoreToCamelCase" value="true"/>
-    </settings>
-<!--设置实体类所在包的别名-->
-    <typeAliases>
-        <package name="com.atguigu.mybatisplus.entity"/>
-    </typeAliases>
-
+<!--mybatisplus中会有自动默认的设置：驼峰-->
+<!--        &lt;!&ndash;设置驼峰式命名&ndash;&gt;-->
+<!--        <settings>-->
+<!--            <setting name="mapUnderscoreToCamelCase" value="true"/>-->
+<!--        </settings>-->
+        <!--设置实体类所在包的别名-->
+        <typeAliases>
+            <package name="com.atguigu.mybatisplus.entity"/>
+        </typeAliases>
 </configuration>
