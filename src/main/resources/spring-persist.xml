@@ -35,7 +35,46 @@
         <property name="mapperLocations" value="classpath:mappers/*Mapper.xml"/>
         <!--装配数据源-->
         <property name="dataSource" ref="dataSource"/>
+        <!--设置mybatisplus的全局配置，即表的前缀-->
+        <property name="globalConfig" ref="globalConfig"></property>
+        <!--配置插件-->
+        <property name="plugins">
+            <array>
+                <ref bean="mybatisPlusInterceptor"></ref>
+            </array>
+        </property>
     </bean>
+
+    <!--配置MyBatis-Plus插件-->
+    <bean id="mybatisPlusInterceptor" class="com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor">
+        <property name="interceptors">
+            <list>
+                <ref bean="paginationInnerInterceptor"></ref>
+            </list>
+        </property>
+    </bean>
+
+
+    <!--配置Mybatis-plus分页插件的bean-->
+    <bean id="paginationInnerInterceptor" class="com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor">
+        <!--设置数据库类型-->
+        <property name="dbType" value="MYSQL"></property>
+    </bean>
+
+
+
+    <bean id="globalConfig" class="com.baomidou.mybatisplus.core.config.GlobalConfig">
+        <property name="dbConfig">
+            <bean id="config" class="com.baomidou.mybatisplus.core.config.GlobalConfig$DbConfig">
+                <!--设置实体类所对应的表的前缀-->
+                <property name="tablePrefix" value="t_"></property>
+<!--                &lt;!&ndash;设置全局主键策略&ndash;&gt;-->
+<!--                <property name="idType" value="AUTO"></property>-->
+             </bean>
+        </property>
+    </bean>
+
+
 
 <!--配置扫描mapper接口到ioc容器-->
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
