@@ -5,13 +5,13 @@
 <mapper namespace="com.atguigu.mybatisplus.mapper.UserMapper">
 
 
-    <!--    &lt;!&ndash;SQL片段，记录基础字段&ndash;&gt;-->
-    <!--    <sql id="BaseColumns">id,name,age,email</sql>-->
+<!--    &lt;!&ndash;SQL片段，记录基础字段&ndash;&gt;-->
+<!--    <sql id="BaseColumns">id,name,age,email</sql>-->
 
 
     <!-- List<User> getAllUser();-->
     <select id="getAllUser" resultType="User">
-        <!--   select  <include refid="BaseColumns"></include> from user-->
+<!--   select  <include refid="BaseColumns"></include> from user-->
         select id,name,age,email from user
     </select>
 
