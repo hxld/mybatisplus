@@ -2,7 +2,6 @@ package com.atguigu.mybatisplus.test;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidPooledConnection;
-import com.atguigu.mybatisplus.mapper.TestMapper;
 
 
 import com.atguigu.mybatisplus.entity.User;
