@@ -11,17 +11,19 @@
                 - %msg%n</pattern>
         </encoder>
     </appender>
+
     <!--myibatis log configure-->
     <logger name="com.apache.ibatis" level="TRACE"/>
     <logger name="java.sql.Connection" level="DEBUG"/>
     <logger name="java.sql.Statement" level="DEBUG"/>
     <logger name="java.sql.PreparedStatement" level="DEBUG"/>
+
     <!-- 日志输出级别 -->
     <root level="DEBUG">
         <appender-ref ref="STDOUT" />
     </root>
 
-    <!-- 根据特殊需求指定局部日志级别 -->
-    <logger name="org.springframework.web.servlet.DispatcherServlet" level="DEBUG" />
-    <logger name="src/test/java/com/atguigu/mybatisplus/test/MyBatisPlusTest.java" level="DEBUG"/>
+<!--    &lt;!&ndash; 根据特殊需求指定局部日志级别 &ndash;&gt;-->
+<!--    <logger name="org.springframework.web.servlet.DispatcherServlet" level="DEBUG" />-->
+<!--    <logger name="src/test/java/com/atguigu/mybatisplus/test/MyBatisPlusTest.java" level="DEBUG"/>-->
 </configuration>
