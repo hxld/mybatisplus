@@ -183,6 +183,7 @@ public class MyBatisPlusTest {
         System.out.println("b:"+b);
     }
 
+    //测试Enum
 
     @Test
     public void testEnum(){

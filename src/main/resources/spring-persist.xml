@@ -67,7 +67,6 @@
 
     <!--配置乐观锁插件-->
     <bean id="optimisticLockerInnerInterceptor" class="com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor">
-
     </bean>
 
 
