@@ -8,4 +8,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @create 2022-08-02 22:29
  */
 public interface ProductMapper extends BaseMapper<Product> {
+
+
+
 }
