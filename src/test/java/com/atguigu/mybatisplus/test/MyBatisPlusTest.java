@@ -92,9 +92,9 @@ public class MyBatisPlusTest {
     public void testInsert(){
 //        INSERT INTO user  ( id, name, age, email )  VALUES  ( ?, ?, ?, ? )
         User user = new User();
-//        user.setUserName("王6");
-        user.setAge(23);
-        user.setEmail("wangwu@126.com");
+//        user.setUserName("");
+        user.setAge(28);
+        user.setEmail("wang@126.com");
         int result = userMapper.insert(user);
 
         System.out.println("result="+result);

@@ -9,7 +9,7 @@ import lombok.Data;
  */
 @Data
 public class Product {
-    private long id;
+    private Long id;
     private String name;
     private Integer price;
     @Version  //表示乐观锁版本号字段
