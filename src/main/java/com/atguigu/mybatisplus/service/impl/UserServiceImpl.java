@@ -1,4 +1,4 @@
-package com.atguigu.mybatisplus.impl;
+package com.atguigu.mybatisplus.service.impl;
 
 import com.atguigu.mybatisplus.entity.User;
 import com.atguigu.mybatisplus.mapper.UserMapper;
