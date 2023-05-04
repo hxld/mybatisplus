@@ -12,5 +12,6 @@ package com.atguigu.mybatisplus.testgit;
 public class testGit {
     public static void main(String[] args) {
         System.out.println("这是一个测试git文件");
+        System.out.println("这是一个测试分支文件");
     }
 }
